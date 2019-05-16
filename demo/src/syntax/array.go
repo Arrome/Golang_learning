@@ -24,4 +24,12 @@ func main() {
 	//[...]表示数组长度根据初始值个数计算
 	q2 := [...]int{1,2,3}
 	fmt.Printf("%T\n",q2)
+
+	var twoD [2][3]int
+	for i := 0; i < 2; i++ {
+		for j := 0; j < 3; j++ {
+			twoD[i][j] = i + j
+		}
+	}
+	fmt.Println("2d: ", twoD)
 }

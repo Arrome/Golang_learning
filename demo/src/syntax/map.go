@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 /**
-	无序的key/value对集合
+	无序的key/value对集合 map[key]value
  */
 
 func main() {
@@ -30,5 +30,12 @@ func main() {
 	//map迭代顺序随机，
 	for name,age := range ages {
 		fmt.Printf("%s\t%d\n",name,age)
+	}
+	for name := range ages {
+		fmt.Println(name)
+	}
+
+	for i,c := range "go" {
+		fmt.Println(i,c) // 1 111
 	}
 }
