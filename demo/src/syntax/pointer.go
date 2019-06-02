@@ -4,9 +4,9 @@ import "fmt"
 
 func main() {
 	x := 1
-	p := &x
+	p := &x  // & 取地址
 	fmt.Println(p)
-	fmt.Println(*p)
+	fmt.Println(*p)  // * 表示指针取值
 	*p = 2
 	fmt.Println(x)
 
@@ -21,7 +21,7 @@ func main() {
 	fmt.Println(*p3)
 }
 
-func f() *int {
+func f() *int {  // 指针类型 *T
 	v := 1
 	return &v
 }
