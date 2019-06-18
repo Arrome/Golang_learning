@@ -4,6 +4,7 @@ import "fmt"
 
 /**
 	无序的key/value对集合 map[key]value
+	内置非线程安全，可使用标准包sync中map
  */
 
 func main() {

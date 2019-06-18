@@ -1,6 +1,11 @@
 package main
 
 import "fmt"
+/**
+	不支持默认参数值
+	不支持函数重载
+	不支持函数嵌套（不支持命名函数嵌套，支持匿名函数嵌套）
+ */
 
 func plus(a int,b int) int {
 	return a+b
@@ -16,6 +21,13 @@ func vals() (int,int) {
 }
 
 //可变参数
+/**
+	所有不定参数类型相同
+	不定参数必须是函数最后一个参数
+	不定参数相当于切片，对切片操作都适用不定参数
+	切片可以作为参数给不定参数，切片后要加上...
+	形参为不定参数和形参为切片的函数类型不同
+ */
 func sum(nums ...int){
 	fmt.Println(nums, " ")
 	total := 0
@@ -32,6 +44,14 @@ func intSeq() func() int {
 		i++
 		return i
 	}
+}
+
+//匿名函数
+func add(a, b int) (sum int) {
+	anonymous := func(x,y int) int {
+		return x + y
+	}
+	return anonymous(a,b)
 }
 
 func main() {
@@ -58,4 +78,8 @@ func main() {
 
 	nextInts := intSeq()
 	fmt.Println(nextInts())
+
+	fmt.Println(add(3,4))
+
+
 }

@@ -28,6 +28,15 @@ func main() {
 	//make函数返回一个slice
 	slice := make([]int,3)
 	fmt.Println(slice)
+
+	//slice操作
 	sliceappend := append(slice, 4)
 	fmt.Println(sliceappend)
+
+	fmt.Println(len(sliceappend))
+	fmt.Println(cap(sliceappend))
+
+	sliceCopy := make([]int,2,2)
+	copy(sliceCopy,sliceappend)
+	fmt.Println(sliceCopy)
 }

@@ -5,6 +5,10 @@ import "fmt"
 func main() {
 	x := 1
 	p := &x  // & 取地址
+
+	//Go不支持指针运算，语言层面禁止。垃圾回收机制，指针运算会造成很多不便
+	//p++
+
 	fmt.Println(p)
 	fmt.Println(*p)  // * 表示指针取值
 	*p = 2
@@ -23,5 +27,5 @@ func main() {
 
 func f() *int {  // 指针类型 *T
 	v := 1
-	return &v
+	return &v //Go编译器使用“栈逃逸”机制将局部变量的空间分配在堆上
 }

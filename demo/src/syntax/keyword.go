@@ -16,6 +16,38 @@ package main
 	make len cap new append copy close
 	delete complex real imag panic recover
  */
+import "os"
 func main() {
-	
+
+
+	/*
+		defer 关键字，可以注册多个延迟调用，FIFO顺序在函数返回时执行。
+		类似Java finaly，常用来保证一些资源最终一定能得到回收和释放
+
+		defer后必须是函数或方法调用，不能是语句
+	 */
+	defer func() {
+		println("first")
+	}()
+
+	defer func() {
+		println("second")
+	}()
+
+	println("funciton body")
+
+	println(fdefer())
+}
+
+
+func fdefer() int {
+	a := 0
+	defer func(i int) {
+		println("defer i=",i)
+	}(a) //值拷贝方式传递，结果不受后续影响
+
+	//退出进程，defer不再执行
+	os.Exit(1)
+	a++
+	return a
 }

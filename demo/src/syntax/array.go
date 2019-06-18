@@ -16,10 +16,16 @@ func main() {
 		fmt.Printf("%d\n",v)
 	}
 
-	//声明并初始化
+	//声明并初始化1
 	var q [3]int = [3]int{1,2}
 	fmt.Println(q[2])
 	fmt.Println(q[1])
+
+	//声明并初始化2,索引方式
+	var iq = [3]int{2:1,1:2}
+	fmt.Println("iq[0]:" ,iq[0])
+	fmt.Println("iq[1]:" ,iq[1])
+	fmt.Println("iq[2]:" ,iq[2])
 
 	//[...]表示数组长度根据初始值个数计算
 	q2 := [...]int{1,2,3}
