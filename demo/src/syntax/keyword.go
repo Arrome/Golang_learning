@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /**
  关键字 25 个：
 	break default func interface select
@@ -16,38 +18,55 @@ package main
 	make len cap new append copy close
 	delete complex real imag panic recover
  */
-import "os"
+
+
 func main() {
+
+	/*
+		panic 主动抛出Go的runtime errors，recover捕获panic抛出的错误
+
+		panic两种情况：
+		1. 程序主动调用panic函数
+			场景：
+				1.程序遇到无法正常执行下去的错误，主动调用panic函数结束运行
+				2.在调试时，主动调用实现快速退出，panic打印出堆栈更快定位错误
+		2. 程序产生运行时错误，由运行时检测抛出
+
+		panic过程：程序会从调用panic的函数位置或发生panic的位置立即返回，逐层向上执行函数的defer语句，然后打印函数调用堆栈，
+				直到被recover捕获或运行到最外层函数退出
+		recover捕获panic，阻止panic继续向上传递。只有在defer后面的函数体内被直接调用才能捕获panic终止异常，否则返回nil,继续向外传递
+	 */
+	//defer func() {
+	//	println("函数体")
+	//}()
+	//
+	//defer exception()
+	//panic("test panic and recover")
 
 
 	/*
-		defer 关键字，可以注册多个延迟调用，FIFO顺序在函数返回时执行。
-		类似Java finaly，常用来保证一些资源最终一定能得到回收和释放
-
-		defer后必须是函数或方法调用，不能是语句
+		可以连续有多个panic被抛出，场景：延迟调用使用
+		但是只有最后一个panic被捕获
 	 */
 	defer func() {
-		println("first")
+		if err := recover(); err != nil {
+			fmt.Println(err)
+		}
 	}()
 
 	defer func() {
-		println("second")
+		panic("first defer panic")
 	}()
 
-	println("funciton body")
+	defer func() {
+		panic("second defer panic")
+	}()
 
-	println(fdefer())
+	panic("main body panic")
 }
 
-
-func fdefer() int {
-	a := 0
-	defer func(i int) {
-		println("defer i=",i)
-	}(a) //值拷贝方式传递，结果不受后续影响
-
-	//退出进程，defer不再执行
-	os.Exit(1)
-	a++
-	return a
+func exception() {
+	println("调用函数")
+	recover()
 }
+
