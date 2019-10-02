@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// 没有break，case里自动break
 func main() {
 	i := 2
 	fmt.Print("Write ", i ," as ")
