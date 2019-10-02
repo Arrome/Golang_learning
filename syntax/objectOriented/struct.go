@@ -2,22 +2,28 @@ package main
 
 import "fmt"
 
-type persion struct{
-	name string
-	age int
+type treeNode struct{
+	value int
+	left,right *treeNode
+}
+//工厂方法实现自定义构造的功能
+func createNode(value int) *treeNode {
+	return &treeNode{value:value} //返回局部变量，编译器决定此值分配在堆上，还是栈上
 }
 
 func main() {
-	fmt.Println(persion{"Bob",20}) //{Bob 20}
-	fmt.Println(persion{name: "Fred"}) //{Fred 0}
-	fmt.Println(&persion{name:"Ann",age:40}) //&{Ann 40}
+	var root treeNode
 
-	s := persion{name: "Sean",age: 50}
-	fmt.Println(s.name) // Sean
+	root = treeNode{value:3}
+	root.left = &treeNode{}
+	root.right = &treeNode{5,nil,nil}
+	root.right.left = new(treeNode)
+	root.right.right = createNode(2)
 
-	sp := &s
-	fmt.Println(sp.age)  // 50
-
-	sp.age = 51
-	fmt.Println(sp.age) //51
+	nodes := []treeNode{
+		{value:3},
+		{},
+		{6,nil,&root},
+	}
+	fmt.Println(nodes)
 }

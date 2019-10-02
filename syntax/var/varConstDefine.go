@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 var(
 	aa int
@@ -19,6 +22,44 @@ func variableShorter(){
 	fmt.Print(a,b)
 }
 
+func consts() {
+	const(
+		filename string = "abc.txt"
+		aa,bb = 3,4
+	)
+
+
+	var c int
+	c = int(math.Sqrt(aa*aa + bb*bb))
+	fmt.Println(filename,c)
+
+}
+
+// 无枚举关键字，以此方式实现枚举
+func enums() {
+	const (
+		cpp = iota
+		_
+		python
+		golang
+		javascript
+	)
+
+	const(
+		b = 1 << (10 * iota)
+		kb
+		mb
+		gb
+		tb
+		pb
+	)
+	fmt.Println(cpp,javascript,python,golang)
+	fmt.Println(b,kb,mb,gb,tb,pb)
+}
 func main() {
 	variableTypeDeduction()
+
+	consts()
+
+	enums()
 }

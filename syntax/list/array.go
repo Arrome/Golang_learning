@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+//数组是值类型，传参数是通过值拷贝。
+//Go语言不直接使用数组，而使用切片。
+// [3]int 和 [5]int 被视作不同数据类型
 func main() {
 	//声明
 	var a [3]int

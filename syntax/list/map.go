@@ -5,6 +5,9 @@ import "fmt"
 /**
 	无序的key/value对集合 map[key]var
 	内置非线程安全，可使用标准包sync中map
+
+	除了slice，map，function内建类型，都可以作为key。
+	map使用哈希表，必须可以做比较
  */
 
 func main() {
