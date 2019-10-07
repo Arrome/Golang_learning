@@ -35,3 +35,7 @@ vgo
 ----------
 
 Goland配置代理：`https://goproxy.io`（安装vgo:`go get -u golang.org/x/vgo`）<br>
+
+gopm
+-----
+`go get `

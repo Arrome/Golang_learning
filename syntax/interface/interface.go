@@ -1,5 +1,12 @@
 package main
+/**
+	类型，抽象类型<br>
+	接口的实现是隐式的，不需要声明，只需要实现方法
 
+	* 接口嵌套
+	* 空接口 ：可以传任意类型
+		使用场景：map的value值类型
+ */
 import (
 	"fmt"
 	"math"
@@ -34,6 +41,7 @@ func (c circle) perim() float64 {
 	return 2 * math.Pi * c.radius
 }
 
+//接口类型，定义实现了需要使用方法的
 func measure(g geometry) {
 	fmt.Println(g)
 	fmt.Println(g.area())
