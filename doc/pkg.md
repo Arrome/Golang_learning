@@ -39,3 +39,15 @@ Goland配置代理：`https://goproxy.io`（安装vgo:`go get -u golang.org/x/vg
 gopm
 -----
 `go get `
+
+
+govendor
+-------
+`go get -u github.com/kardianos/govendor`
+
+problem:`Error: Package "xxx" not a go package or not in GOPATH.`
+
+godep 
+----
+解决包依赖问题，依赖vendor<br>
+`go get github.com/tools/godep`

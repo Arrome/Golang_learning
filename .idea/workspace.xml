@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8eda115-b71f-43bf-b1a0-503553568eb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/doc/cli.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/syntax/function/functional/functional.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/syntax/function/pointerReciver.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/syntax/interface/typeAssertion.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/syntax/objectOriented/package.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/buildin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/flag.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/flag/demo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/syntax/error/errorDeep.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/syntax/reflect/reflect.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/syntax/closure.go" beforeDir="false" afterPath="$PROJECT_DIR$/syntax/function/functional/closure.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/syntax/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/syntax/interface/interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/syntax/defer.go" beforeDir="false" afterPath="$PROJECT_DIR$/syntax/error/defer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/syntax/error.go" beforeDir="false" afterPath="$PROJECT_DIR$/syntax/error/error.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/pkg.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pkg.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/syntax/function/func.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/syntax/function/function.go" beforeDir="false" afterPath="$PROJECT_DIR$/syntax/function/function.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/syntax/function/pointerReciver.go" beforeDir="false" afterPath="$PROJECT_DIR$/syntax/function/pointerReciver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/syntax/objectOriented/package.go" beforeDir="false" afterPath="$PROJECT_DIR$/syntax/objectOriented/package.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/syntax/var/varInner.go" beforeDir="false" afterPath="$PROJECT_DIR$/syntax/var/varInner.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,14 +27,6 @@
         <option value="Go Application" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>go</find>
-      <find />
-      <find>service</find>
-      <find>ssh.Dial</find>
-    </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
@@ -70,11 +63,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/syntax/error" />
       <recent name="$PROJECT_DIR$/syntax/function/functional" />
       <recent name="$PROJECT_DIR$/syntax/interface" />
       <recent name="$PROJECT_DIR$/syntax/list" />
       <recent name="$PROJECT_DIR$/syntax/pointer" />
-      <recent name="$PROJECT_DIR$/syntax/function" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -89,59 +82,59 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build functional.go">
-    <configuration name="go build functional.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build errorDeep.go">
+    <configuration name="go build buildin.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Golang_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/syntax/function/functional/functional.go" />
+      <filePath value="$PROJECT_DIR$/lib/buildin.go" />
       <package value="github.com/Arrome/Golang_learning" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build github.com/Arrome/Golang_learning/syntax/function/functional" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Golang_learning" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/syntax/function/functional/functional.go" />
-      <package value="github.com/Arrome/Golang_learning/syntax/function/functional" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build github.com/Arrome/Golang_learning/syntax/interface" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build demo.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Golang_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/syntax/interface/typeAssertion.go" />
-      <package value="github.com/Arrome/Golang_learning/syntax/interface" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build interface.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Golang_learning" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/syntax/interface/interface.go" />
+      <filePath value="$PROJECT_DIR$/lib/flag/demo.go" />
       <package value="github.com/Arrome/Golang_learning" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build typeAssertion.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build errorDeep.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Golang_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/syntax/interface/typeAssertion.go" />
+      <filePath value="$PROJECT_DIR$/syntax/error/errorDeep.go" />
+      <package value="github.com/Arrome/Golang_learning" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build flag.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Golang_learning" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/lib/flag.go" />
+      <package value="github.com/Arrome/Golang_learning" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build reflect.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Golang_learning" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/syntax/reflect/reflect.go" />
       <package value="github.com/Arrome/Golang_learning" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build functional.go" />
-        <item itemvalue="Go Build.go build github.com/Arrome/Golang_learning/syntax/function/functional" />
-        <item itemvalue="Go Build.go build github.com/Arrome/Golang_learning/syntax/interface" />
-        <item itemvalue="Go Build.go build typeAssertion.go" />
-        <item itemvalue="Go Build.go build interface.go" />
+        <item itemvalue="Go Build.go build errorDeep.go" />
+        <item itemvalue="Go Build.go build reflect.go" />
+        <item itemvalue="Go Build.go build demo.go" />
+        <item itemvalue="Go Build.go build flag.go" />
+        <item itemvalue="Go Build.go build buildin.go" />
       </list>
     </recent_temporary>
   </component>

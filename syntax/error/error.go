@@ -5,6 +5,9 @@ import (
 	"fmt"
 )
 
+// 创建error两种方式：
+// 1. errors.New("")
+// 2. fmt.Errorf("")
 func f1(arg int) (int,error) {
 	if arg == 42 {
 		return -1,errors.New("can not work with 42")
@@ -17,6 +20,7 @@ type argError struct {
 	prob string
 }
 
+//自定义error 实现error接口方法
 func (e *argError) Error() string {
 	return fmt.Sprint("%d - %s",e.arg,e.prob)
 }
