@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8eda115-b71f-43bf-b1a0-503553568eb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/buildin.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/flag.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/flag/demo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/syntax/error/errorDeep.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/syntax/reflect/reflect.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/syntax/error/panic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/syntax/error/recover.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/syntax/var/enumerate.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third_party_libs/driver/entity/userinfo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third_party_libs/driver/go-sql-driver.mysql/connector.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/swagger/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/syntax/defer.go" beforeDir="false" afterPath="$PROJECT_DIR$/syntax/error/defer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/syntax/error.go" beforeDir="false" afterPath="$PROJECT_DIR$/syntax/error/error.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/pkg.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/pkg.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/syntax/function/pointerReciver.go" beforeDir="false" afterPath="$PROJECT_DIR$/syntax/function/pointerReciver.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/syntax/objectOriented/package.go" beforeDir="false" afterPath="$PROJECT_DIR$/syntax/objectOriented/package.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/syntax/var/varInner.go" beforeDir="false" afterPath="$PROJECT_DIR$/syntax/var/varInner.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/buildin.go" beforeDir="false" afterPath="$PROJECT_DIR$/sdk_libs/buildin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flag.go" beforeDir="false" afterPath="$PROJECT_DIR$/sdk_libs/flag.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flag/demo.go" beforeDir="false" afterPath="$PROJECT_DIR$/sdk_libs/flag/demo.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,17 +33,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GoLibraries">
-    <option name="urls">
-      <list>
-        <option value="file://$PROJECT_DIR$/demo" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectId" id="1QBnD7QZ7xIac5su3xQvwHPEVy2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go Application" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
@@ -59,15 +54,15 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoProjectSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/syntax" />
       <recent name="$PROJECT_DIR$/syntax/error" />
       <recent name="$PROJECT_DIR$/syntax/function/functional" />
       <recent name="$PROJECT_DIR$/syntax/interface" />
       <recent name="$PROJECT_DIR$/syntax/list" />
-      <recent name="$PROJECT_DIR$/syntax/pointer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -82,12 +77,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build errorDeep.go">
-    <configuration name="go build buildin.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build enumerate.go">
+    <configuration name="go build connector.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Golang_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/lib/buildin.go" />
+      <filePath value="$PROJECT_DIR$/third_party_libs/driver/go-sql-driver.mysql/connector.go" />
       <package value="github.com/Arrome/Golang_learning" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
@@ -101,20 +96,20 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build enumerate.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Golang_learning" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/syntax/var/enumerate.go" />
+      <package value="github.com/Arrome/Golang_learning" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build errorDeep.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Golang_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/syntax/error/errorDeep.go" />
-      <package value="github.com/Arrome/Golang_learning" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build flag.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Golang_learning" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/lib/flag.go" />
       <package value="github.com/Arrome/Golang_learning" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
@@ -130,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build enumerate.go" />
+        <item itemvalue="Go Build.go build connector.go" />
         <item itemvalue="Go Build.go build errorDeep.go" />
         <item itemvalue="Go Build.go build reflect.go" />
         <item itemvalue="Go Build.go build demo.go" />
-        <item itemvalue="Go Build.go build flag.go" />
-        <item itemvalue="Go Build.go build buildin.go" />
       </list>
     </recent_temporary>
   </component>
